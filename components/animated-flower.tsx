@@ -1468,24 +1468,6 @@ export function AnimatedFlower({ colors }: AnimatedFlowerProps) {
         </div>
       </div>
 
-      <div className="audio-controls">
-        <button
-          className="audio-toggle"
-          onClick={() => {
-            const audio = document.getElementById("background-audio") as HTMLAudioElement
-            if (audio.paused) {
-              audio.play()
-              ;(document.querySelector(".audio-toggle") as HTMLElement).innerHTML = "🔊"
-            } else {
-              audio.pause()
-              ;(document.querySelector(".audio-toggle") as HTMLElement).innerHTML = "🔇"
-            }
-          }}
-        >
-          🔇
-        </button>
-      </div>
-
       <audio id="background-audio" loop preload="auto" style={{ display: "none" }}>
         <source src="/placeholder.mp3?query=peaceful nature sounds with gentle wind and birds" type="audio/mpeg" />
         Your browser does not support the audio element.
